@@ -4,6 +4,10 @@ import Color from './Color';
 import AgeGroup from './AgeGroup';
 import Tag from './Tag';
 
+interface Image {
+  imagePath: string;
+}
+
 interface Character {
   id: string;
   malId: number;
@@ -21,7 +25,8 @@ interface Character {
   hairColors?: Color[];
   ageGroups?: AgeGroup[];
   tags?: Tag[];
-  images: any[];
+  image: Image;
+  images: Image[];
   createdAt?: string;
   updatedAt?: string;
 }

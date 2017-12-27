@@ -39,7 +39,7 @@ const QUERY_CHARACTERS = gql`
         description
       }
       updatedAt
-      images {
+      image {
         imagePath
       }
     }

@@ -5,7 +5,7 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import styled from 'styled-components';
 
-import UploadModal from './UploadModal';
+// import UploadModal from './UploadModal';
 import TagAutoComplete from './TagAutoComplete';
 import * as types from '../../types/data';
 import UPDATE_CHARACTER_MUTATION from '../../mutations/updateCharacter';
@@ -322,12 +322,12 @@ class Character extends React.Component<Props, State> {
     let imagePath = null;
     let imageLink = null;
 
-    if (character.images[0]) {
-        imagePath = character.images[0].imagePath;
+    if (character.image) {
+        imagePath = character.image.imagePath;
     }
 
     if (imagePath) {
-      imageLink = `https://s3.us-east-2.amazonaws.com/media.animecharacters/images/character/big/${imagePath}`;
+      imageLink = `https://s3.us-east-2.amazonaws.com/animecharacters.media/images/characters/big/${imagePath}`;
     }
 
     return (
@@ -357,13 +357,13 @@ class Character extends React.Component<Props, State> {
             tags={this.props.tags}
             updateSelectedTagIds={this.updateSelectedTagIds}
           />
-          <RaisedButton
+          {/* <RaisedButton
             label='Upload Image'
             secondary={true}
             disabled={!this.props.isSuperUser}
             style={{marginLeft: '50px'}}
             onClick={this.openUploadModal}
-          />
+          /> */}
           <RaisedButton
             label='Update Character'
             secondary={true}
@@ -372,12 +372,12 @@ class Character extends React.Component<Props, State> {
           />
           <span style={{marginLeft: '20px'}}>{this.state.updateMessage}</span>
         </div>
-        <UploadModal
+        {/* <UploadModal
           prefix={parseInt(character.id, 10)}
           isOpen={this.state.showUploadModal}
           closeUploadModal={this.closeUploadModal}
           uploadImage={this.setImage}
-        />
+        /> */}
       </CharacterDiv>
     );
   }
