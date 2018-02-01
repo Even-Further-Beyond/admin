@@ -1,5 +1,7 @@
 ### Anime Characters Admin Interface (React/Redux, TypeScript, Apollo, Auth0 Authentication)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Even-Further-Beyond/admin.svg)](https://greenkeeper.io/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ### To run:
